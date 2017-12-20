@@ -1,3 +1,7 @@
 body {
   font-family: 'Space Mono', monospace;
+  text-align: center;
+  align-content: middle;
+  margin:0px auto;
+  background-color: #8cb5f3
 }
