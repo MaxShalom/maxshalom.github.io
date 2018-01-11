@@ -3,12 +3,9 @@ body {
   text-align: center;
   align-content: middle;
   margin:0px auto;
+  background: #036ED9;
 }
 
 h1 {
-  background: linear-gradient (135deg, #0FF0B3 0%,#036ED9 100%);
-}
-
-.projects {
-  background: #036ED9;
+  color: linear-gradient (135deg, #0FF0B3 0%,#036ED9 100%);
 }
