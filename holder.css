@@ -1,0 +1,11 @@
+body {
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  align-content: middle;
+  margin:0px auto;
+  background: rgb(91, 128, 223);
+}
+
+h1 {
+  color: linear-gradient (135deg, #0FF0B3 0%,#036ED9 100%);
+}
