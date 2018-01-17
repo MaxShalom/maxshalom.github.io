@@ -9,3 +9,8 @@ body {
 h1 {
   color: linear-gradient (135deg, #0FF0B3 0%,#036ED9 100%);
 }
+
+.btcwdgt-chart {
+  align-content: center;
+  align-items: center;
+}
