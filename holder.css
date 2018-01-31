@@ -3,7 +3,12 @@ body {
   text-align: center;
   align-content: middle;
   margin:0px auto;
-  background: rgb(91, 128, 223);
+  background: #0470dc; /* Old Browsers */
+  background: -webkit-linear-gradient(top,#10daf6,#0470dc); /*Safari 5.1-6*/
+  background: -o-linear-gradient(top,#10daf6,#0470dc); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(top,#10daf6,#0470dc); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom, #10daf6, #0470dc); /*Standard*/
+
 }
 
 h1 {
