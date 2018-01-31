@@ -18,10 +18,15 @@ h1 {
 .construction-text {
   margin-top: 0;
   margin-bottom: 10;
-  background:linear-gradient(135deg, #fad961 0%,#f7852c 100%);
-  color: #ffffff;
   text-anchor: middle;
   text-align: center;
+  color: #ffffff;
+  background: #fad961; /* Old Browsers */
+  background: -webkit-linear-gradient(top,#fad961,#f7852c); /*Safari 5.1-6*/
+  background: -o-linear-gradient(top,#fad961,#f7852c); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(top,#fad961,#f7852c); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom, #fad961, #f7852c); /*Standard*/
+
 }
 
 .btcwdgt-chart {
