@@ -15,7 +15,17 @@ h1 {
   color: linear-gradient (135deg, #0FF0B3 0%,#036ED9 100%);
 }
 
+.construction-text {
+  margin-top: 0;
+  margin-bottom: 10;
+  background:linear-gradient(135deg, #fad961 0%,#f7852c 100%);
+  color: #ffffff;
+  text-anchor: middle;
+  text-align: center;
+}
+
 .btcwdgt-chart {
   align-content: center;
   align-items: center;
 }
+
