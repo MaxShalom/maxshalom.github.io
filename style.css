@@ -1,0 +1,16 @@
+h2 {
+  font-family: 'Space Mono', monospace;
+}
+
+.uk-card-body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+html {
+  background: #0470dc; /* Old Browsers */
+  background: -webkit-linear-gradient(top,#10daf6,#0470dc); /*Safari 5.1-6*/
+  background: -o-linear-gradient(top,#10daf6,#0470dc); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(top,#10daf6,#0470dc); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom, #10daf6, #0470dc); /*Standard*/
+}
+
