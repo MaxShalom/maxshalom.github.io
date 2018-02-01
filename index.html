@@ -4,11 +4,14 @@
 
     <title>Max Shalom</title>
 
-    <link rel="stylesheet" type="text/css" href="holder.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/css/uikit.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="holder.css">
     
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
@@ -18,7 +21,7 @@
     <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="assets/icons/favicon.ico">
     <meta name="msapplication-config" content="assets/icons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <!--<meta name="theme-color" content="#ffffff">-->
 
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,21 +29,42 @@
 
   </head>
   <body>
-
-    <p class="construction-text">
-      This page is currently </br>
-      under construction.
-      </br>
-    </p>
-
     
-    <h1>
-      Max Shalom
-    </h1>
+    <ul>
+      <li><a class="active" href="#home"><img src="assets/icon.png" alt="Logo" height="30" width="30"></a></li>
+      <li><a href=".projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
 
-    <img src="assets/construction.png" alt="Construction going on here!" height="300" width="300">
+    <div class="jumbotron">
+        <h1 class="display-4">Max Shalom</h1>
+        <p class="lead">
+          Hey. I'm a developer learning to code and experimenting with many coding languages.
+        </p>
+        <hr class="my-4">
+        <p>
+          I started off learning front-end web development with HTML and CSS. I then learned a little bit of game
+          development in Unity with C#. In addition, I am now taking the AP Computer Science A
+          course in Java and leaning JavaScript and Python in my free time on my own.
+          I enjoy following interesting new products, ideas, and gadgets.
+        </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="https://github.com/MaxShalom" role="button">Check me out on GitHub</a>
+        </p>
+        <p class="construction-text">
+            This page is currently </br>
+            under construction.
+            </br>
+        </p>
+      </div>
+    
 
-    </br>
+    <!--<img src="assets/construction.png" alt="Construction going on here!" height="300" width="300">-->
+
+    <h3 class="projects">
+      Projects
+    </h3>
     </br>
 
     <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
@@ -93,6 +117,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit-icons.min.js"></script>
   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
   </body>
 </html>

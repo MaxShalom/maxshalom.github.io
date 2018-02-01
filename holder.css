@@ -1,7 +1,4 @@
 body {
-  font-family: 'Space Mono', monospace;
-  text-align: center;
-  align-content: middle;
   margin:0px auto;
   background: #0470dc; /* Old Browsers */
   background: -webkit-linear-gradient(top,#10daf6,#0470dc); /*Safari 5.1-6*/
@@ -9,6 +6,34 @@ body {
   background: -moz-linear-gradient(top,#10daf6,#0470dc); /*Fx 3.6-15*/
   background: linear-gradient(to bottom, #10daf6, #0470dc); /*Standard*/
 
+}
+
+p {
+  font-family: 'Space Mono', monospace;s
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(0,0,0,0.1);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:rgba(0,0,0,0.1);;
 }
 
 .construction-text {
@@ -23,6 +48,10 @@ body {
   background: -moz-linear-gradient(top,#fad961,#f7852c); /*Fx 3.6-15*/
   background: linear-gradient(to bottom, #fad961, #f7852c); /*Standard*/
 
+}
+
+.projects {
+  text-align: center;
 }
 
 .btcwdgt-chart {
