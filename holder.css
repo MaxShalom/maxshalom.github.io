@@ -9,7 +9,11 @@ body {
 }
 
 p {
-  font-family: 'Space Mono', monospace;s
+  font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+  font-family: 'Bungee Inline', cursive;
 }
 
 ul {
