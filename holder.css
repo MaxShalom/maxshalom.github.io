@@ -12,6 +12,10 @@ p {
   font-family: 'Open Sans', sans-serif;
 }
 
+.jumbotron {
+  background: #ffffff;
+}
+
 h3 {
   font-family: 'Bungee Inline', cursive;
 }
@@ -38,6 +42,14 @@ li a {
 
 li a:hover {
   background-color:rgba(0,0,0,0.1);;
+}
+
+.uk-button-text {
+  color: #F5515F;
+}
+
+.uk-card a:hover {
+  color: #0470dc;
 }
 
 .construction-text {
