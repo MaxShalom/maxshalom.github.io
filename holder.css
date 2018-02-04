@@ -13,7 +13,7 @@ p {
 }
 
 .jumbotron {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0);
 }
 
 h3 {
