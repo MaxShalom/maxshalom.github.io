@@ -26,6 +26,8 @@ ul {
   padding: 0;
   overflow: hidden;
   background: rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
 }
 
 li {
