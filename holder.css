@@ -8,16 +8,8 @@ body {
 
 }
 
-p {
-  font-family: 'Open Sans', sans-serif;
-}
-
-.jumbotron {
-  background: rgba(255, 255, 255, 0);
-}
-
-h3 {
-  font-family: 'Bungee Inline', cursive;
+#nav {
+  z-index: 9;
 }
 
 ul {
@@ -46,12 +38,12 @@ li a:hover {
   background-color:rgba(0,0,0,0.1);;
 }
 
-.uk-button-text {
-  color: #F5515F;
+.jumbotron {
+  background: rgba(255, 255, 255, 0);
 }
 
-.uk-card a:hover {
-  color: #0470dc;
+p {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .construction-text {
@@ -65,16 +57,41 @@ li a:hover {
   background: -o-linear-gradient(top,#fad961,#f7852c); /*Opera 11.1-12*/
   background: -moz-linear-gradient(top,#fad961,#f7852c); /*Fx 3.6-15*/
   background: linear-gradient(to bottom, #fad961, #f7852c); /*Standard*/
-
 }
 
-.projects {
+h3 {
+  font-family: 'Bungee Inline', cursive;
+}
+
+.uk-button-text {
+  color: #F5515F;
+}
+
+.uk-card a:hover {
+  color: #0470dc;
+}
+
+.uk-card {
+  background:#ffffff;
+}
+
+.projects-heading {
   text-align: center;
+}
+
+.more-projects {
+text-align: center;
 }
 
 .btcwdgt-chart {
   align-content: center;
   align-items: center;
   margin-bottom: 0;
+}
+
+footer {
+  background: #414141;
+  color: #ffffff;
+  text-align: center;
 }
 
