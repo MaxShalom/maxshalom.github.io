@@ -63,11 +63,11 @@ h3 {
   font-family: 'Bungee Inline', cursive;
 }
 
-.uk-button-text {
+.button-links {
   color: #F5515F;
 }
 
-.uk-card a:hover {
+.button-links a:hover {
   color: #0470dc;
 }
 
@@ -81,7 +81,7 @@ h3 {
 
 .more-projects {
   text-align: center;
-  font-size: 36pt;
+  font-size: 72px;
   color: #000000;
 }
 
