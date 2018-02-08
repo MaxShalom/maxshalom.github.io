@@ -40,6 +40,7 @@ li a:hover {
 
 .jumbotron {
   background: rgba(255, 255, 255, 0);
+  padding-top: 115px;      
 }
 
 p {
@@ -81,11 +82,14 @@ h3 {
 
 .more-projects {
   text-align: center;
-  font-size: 72px;
+  align-content: center
   color: #000000;
+  background: #ffffff;
 }
 
-
+.more-projects-button {
+  text-align: center;
+}
 
 .btcwdgt-chart {
   align-content: center;
