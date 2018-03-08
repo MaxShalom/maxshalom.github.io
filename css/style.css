@@ -59,6 +59,7 @@ p {
   background: -o-linear-gradient(top,#fad961,#f7852c); /*Opera 11.1-12*/
   background: -moz-linear-gradient(top,#fad961,#f7852c); /*Fx 3.6-15*/
   background: linear-gradient(to bottom, #fad961, #f7852c); /*Standard*/
+  border-radius: 10px;
 }
 
 h3 {
