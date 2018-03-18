@@ -1,75 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/css/uikit.min.css" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <!-- My CSS -->
-    <link rel="stylesheet" type="text/css" href="css/holder.css">
-    
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans" rel="stylesheet"> 
-    
-    <title>
-      Max Shalom
-    </title>
-  </head>
-  <body>
-
-    <div class="jumbotron">
-      <h1 class="display-4">Max Shalom</h1>
-      <p class="lead">
-        Hey. I'm a developer learning to code and experimenting with many coding languages.
-      </p>
-      <hr class="my-4">
-      <p>
-        I started off learning front-end web development with HTML and CSS. I then learned a little bit of game
-        development in Unity with C#. In addition, I am now taking the AP Computer Science A
-        course in Java and leaning JavaScript and Python in my free time on my own.
-        I enjoy following interesting new products, ideas, and gadgets.
-      </p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="https://github.com/MaxShalom" role="button">Check me out on GitHub</a>
-      </p>
-    </div>
-
-    <div class="projects">
-      <h2 align="center">
-        Projects
-      </h2>
-
-      <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-card-hover">
-                <h3 class="uk-card-title">Default</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-card-hover">
-                <h3 class="uk-card-title">Primary</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-card-hover">
-                <h3 class="uk-card-title">Secondary</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Max Shalom</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Work+Sans:400,600,700" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="css/holder.css">
+</head>
+<body>
+  <div class="land">
+    <nav class="navbar my-nav is-transparent is-fixed-top">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="assets/logo.svg" alt="Max Shalom" width="50" height="50">
+        </a>
+        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
-    </div> 
+    
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#">
+            Home
+          </a>
+          <a class="navbar-item" href="about.html">
+            About
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="/documentation/overview/start/">
+              Projects
+            </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="/documentation/overview/start/">
+                Overview
+              </a>
+              <a class="navbar-item" href="https://bulma.io/documentation/components/breadcrumb/">
+                Components
+              </a>
+            </div>
+          </div>
+          <a class="navbar-item" href="contact.html">
+            Contact
+          </a>
+        </div>
+      </div>
+    </nav>
 
+    <section class="hero is-medium">
+      <div class="hero-body">
+        <div align="center" class="container">
+          <h2 class="intro">
+            Hello World, I'm
+          </h2>
+          <h1 class="my-name">
+            Max Shalom
+          </h1>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <div class="about-quote">
+    <p>
+        I'm a developer/student
+        who builds websites, games,
+        and more and I'm always 
+        looking for new things to learn.
+    </p>
+  </div>
 
-    <!-- UIkit JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit-icons.min.js"></script>
-  </body>
+  <div class="card-row">
+    <h2 class="row-title">
+      Projects
+    </h2>
+    <div class="columns">
+      <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <time datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <time datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <time datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-row">
+    <h2 class="row-title">
+      Projects
+    </h2>
+    <div class="columns">
+      <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <time datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <time datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <time datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-row">
+    <h2 class="row-title">
+      Projects
+    </h2>
+    <div class="columns">
+      <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <time datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <time datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <time datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+    // Get all "navbar-burger" elements
+    var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach(function ($el) {
+        $el.addEventListener('click', function () {
+
+          // Get the target from the "data-target" attribute
+          var target = $el.dataset.target;
+          var $target = document.getElementById(target);
+
+          // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+          $el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+
+        });
+      });
+    }
+
+    });
+  </script>
+</body>
 </html>

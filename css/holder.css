@@ -1,16 +1,54 @@
-h2 {
-  font-family: 'Space Mono', monospace;
-}
-
-.uk-card-body {
+.my-nav {
+  background-color: rgba(0, 0, 0, 0);
   font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  color: white;
 }
 
-html {
-  background: #0470dc; /* Old Browsers */
-  background: -webkit-linear-gradient(top,#10daf6,#0470dc); /*Safari 5.1-6*/
-  background: -o-linear-gradient(top,#10daf6,#0470dc); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(top,#10daf6,#0470dc); /*Fx 3.6-15*/
-  background: linear-gradient(to bottom, #10daf6, #0470dc); /*Standard*/
+.land {
+  background: #0ff0b3; /* Old Browsers */
+  background: -webkit-linear-gradient(bottom right,#0ff0b3,#036ed9); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom right,#0ff0b3,#036ed9); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom right,#0ff0b3,#036ed9); /*Fx 3.6-15*/
+  background: linear-gradient(bottom right, #0ff0b3, #036ed9); /*Standard*/
 }
 
+.intro {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  color: rgb(0, 0, 0);
+}
+
+.my-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  color: black;
+}
+
+.about-quote {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  padding-left: 50px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #000023;
+  color: white;
+  font-size: 42px;
+}
+
+.card-row {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row-title {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
