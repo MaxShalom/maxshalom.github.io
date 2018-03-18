@@ -45,6 +45,14 @@
   padding-right: 15px;
 }
 
+.projects-button {
+  background-color: #000078;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  color: white;
+  border-radius: 2px;
+}
+
 .row-title {
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
