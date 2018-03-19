@@ -41,8 +41,8 @@
 .card-row {
   padding-bottom: 50px;
   padding-top: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .projects-button {
@@ -50,7 +50,18 @@
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
   color: white;
-  border-radius: 2px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.projects-button:hover {
+  background-color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  color: #000078;
+  border-radius: 5px;
+  border-color: #000078;
+  border-width: 2px;
 }
 
 .row-title {
