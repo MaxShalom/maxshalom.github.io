@@ -1,166 +1,312 @@
 <!DOCTYPE html>
-<html>
-  <head>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet"> 
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/css/uikit.min.css" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" 
-    integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" 
-    crossorigin="anonymous">
-    <!-- My CSS -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=yyaPoeNexA">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png?v=yyaPoeNexA">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png?v=yyaPoeNexA">
-    <link rel="manifest" href="assets/icons/site.webmanifest?v=yyaPoeNexA">
-    <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg?v=yyaPoeNexA" color="#10daf6">
-    <link rel="shortcut icon" href="assets/icons/favicon.ico?v=yyaPoeNexA">
-    <meta name="msapplication-TileColor" content="#10daf6">
-    <meta name="msapplication-config" content="assets/icons/browserconfig.xml?v=yyaPoeNexA">
-    
-    <meta name="msapplication-config" content="assets/icons/browserconfig.xml">
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0470dc">
-
-    <title>Max Shalom</title>
-    <meta name="description" content="Hey. I'm a developer learning to code and experimenting with many different coding languages. ">
-
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Max Shalom">
-    <meta itemprop="description" content="Hey. I'm a developer learning to code and experimenting with many different coding languages. ">
-    <meta itemprop="image" content="http://maxshalom.me/assets/background.png">
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="http://maxshalom.me">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Max Shalom">
-    <meta property="og:description" content="Hey. I'm a developer learning to code and experimenting with many different coding languages. ">
-    <meta property="og:image" content="http://maxshalom.me/assets/background.png">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Max Shalom">
-    <meta name="twitter:description" content="Hey. I'm a developer learning to code and experimenting with many different coding languages. ">
-    <meta name="twitter:image" content="http://maxshalom.me/assets/background.png">
-
-
-  </head>
-  <body>
-    
-    <ul id="nav">
-      <li><a class="active" href="#"><img src="assets/icons/logo.png" alt="Logo" height="30" width="30"></a></li>
-      <li><a href="#edu">Education</a></li>
-      <li><a href="#exp">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#footer">Contact</a></li>
-    </ul>
-
-    <div class="jumbotron">
-        <h1 class="display-4">Max Shalom</h1>
-        <p class="lead">
-          Hey. I'm a developer learning to code and experimenting with many different coding languages.
-        </p>
-        <hr class="my-4">
-        <p>
-          I started off learning front-end web development with HTML and CSS. Then, I learned a little bit of game
-          development in Unity with C#. <br> Now, I'm studying to take the AP Computer Science A 
-          in Java exam. In my free time, I'm learning JavaScript and Python. <br>
-          I enjoy following interesting new products, ideas, and gadgets.
-        </p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="https://github.com/MaxShalom" role="button">Check me out on GitHub</a>
-        </p>
-        <a href=https://github.com/MaxShalom/maxshalom.github.io>
-          <p class="construction-text">
-              This page is currently <br>
-              under construction.
-              <br>
-          </p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Max Shalom</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Work+Sans:400,600,700" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="land">
+    <nav class="navbar my-nav is-transparent is-fixed-top">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="assets/logo.svg" alt="Max Shalom" width="50" height="50">
         </a>
+        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     
-
-    <div class="projects">
-      <br>
-      <h3 class="projects-heading" id="projects">
-        Projects
-      </h3>
-      <br>
-
-      <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-card-hover">
-                <h3 class="uk-card-title">BootstrapX</h3>
-                <p>A project to experiment with the components of different 
-                  web frameworks, mainly Bootstrap, using real text, not "lorum ipsum". 
-                <br> 
-                <a class="uk-button uk-button-text button-links" href="http://maxshalom.me/BootstrapX/">See BootstrapX</a>
-                </p>
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#">
+            Home
+          </a>
+          <a class="navbar-item" href="about.html">
+            About
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="#">
+              Projects
+            </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="#">
+                Latest
+              </a>
+              <a class="navbar-item" href="#">
+                Featured
+              </a>
             </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-card-hover">
-                <h3 class="uk-card-title">AP-Java</h3>
-                <p>Code, examples, notes, and resources from my journey 
-                  through learning Java for the AP Computer Science A course.
-                <br>
-                <a class="uk-button uk-button-text button-links" href="http://maxshalom.me/ap-java/">See AP-Java</a>
-                </p>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-card-hover">
-                <h3 class="uk-card-title">Codus Operandi</h3>
-                <p>A curated list of the best programming style guides on the web 
-                  for many different languages.
-                <br>
-                <a class="uk-button uk-button-text button-links" href="http://maxshalom.me/codus-operandi/">See Codus Operandi</a>
-                </p>
-            </div>
+          </div>
+          <a class="navbar-item" href="contact.html">
+            Contact
+          </a>
         </div>
       </div>
-      <br>
-        <h4 class="more-projects-button">
-          <p><a class="uk-button uk-button-default more-projects" href="#">See more projects...</a></p>
-        </h4>
+    </nav>
+
+    <section class="hero is-medium">
+      <div class="hero-body">
+        <div align="center" class="container">
+          <h2 class="intro">
+            Hello World, I'm
+          </h2>
+          <h1 class="my-name">
+            Max Shalom
+          </h1>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="about-quote">
+    <p>
+        I'm a developer/student
+        who builds websites, games,
+        and more and I'm always 
+        looking for new things to learn.
+    </p>
+  </div>
+
+  <div class="card-row">
+    <h2 class="row-title">
+      Projects
+    </h2>
+    <div class="columns">
+      <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <br>
+                <time class="tag is-light" datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <br>
+                <time class="tag is-light" datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <br>
+                <time class="tag is-light" datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
-
     <br>
-    <div class="btcwdgt-chart"></div>
+    <div align="center">
+      <a class="projects-button button is-medium">More Projects &#8594;</a>
+    </div>
+  </div>
+
+  <div class="card-row">
+    <h2 class="row-title">
+      Experience
+    </h2>
+    <div class="columns">
+      <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <br>
+                <time class="tag is-light" datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <br>
+                <time class="tag is-light" datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <br>
+                <time class="tag is-light" datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-row">
+    <h2 class="row-title">
+      Education
+    </h2>
+    <div class="columns">
+      <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <br>
+                <time class="tag is-light" datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <br>
+                <time class="tag is-light" datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Component
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+                <br>
+                <time class="tag is-light" datetime="2018-1-1">Jan 2018</time>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="columns content">
+      <div class="column">
+        <img src="assets/logo.svg" width="150px" height="150px" align="center">
+      </div>
+      <div class="column">
+        <p><strong>Max Shalom</strong></p>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="projects.html">Projects</a></p>
+      </div>
+      <div class="column">
+        <p><strong>Drop me a line</strong></p>
+        <p><a href="mailto:hello@maxshalom.me">hello@maxshalom.me</a></p>
+        <p><a href="https://github.com/MaxShalom">GitHub</a></p>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="source-code">
     <br>
+    <p><a href="https://github.com/MaxShalom/maxshalom.github.io">Source code available on GitHub</a></p>
+    <br>
+  </div>
 
-    <footer id="footer">
-      <br>
-      <p>Designed and made by <a href="https://github.com/MaxShalom">Max Shalom</a></p>
-      <p>Contact: <a href="mailto:hello@maxshalom.me">
-      hello@maxshalom.me</a></p>
-      <p>See the source code on <a href="https://github.com/MaxShalom/maxshalom.github.io">GitHub</a></p>
-      <br>
-    </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
 
-    <script>
-      (function(b,i,t,C,O,I,N) {
-        window.addEventListener('load',function() {
-          if(b.getElementById(C))return;
-          I=b.createElement(i),N=b.getElementsByTagName(i)[0];
-          I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
-        },false)
-      })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
-    </script>
-    <!-- UIkit JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit-icons.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    // Get all "navbar-burger" elements
+    var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-  </body>
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach(function ($el) {
+        $el.addEventListener('click', function () {
+
+          // Get the target from the "data-target" attribute
+          var target = $el.dataset.target;
+          var $target = document.getElementById(target);
+
+          // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+          $el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+
+        });
+      });
+    }
+
+    });
+  </script>
+</body>
 </html>
