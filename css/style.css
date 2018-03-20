@@ -1,3 +1,13 @@
+::selection {
+  background: #000078; /* WebKit/Blink Browsers */
+  color: white;
+}
+
+::-moz-selection {
+  background: #000078; /* Gecko Browsers */
+  color: white;
+}
+
 .my-nav {
   background-color: rgba(0, 0, 0, 0);
   font-family: 'Work Sans', sans-serif;
