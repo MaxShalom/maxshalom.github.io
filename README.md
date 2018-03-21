@@ -1,7 +1,7 @@
-# My Site
+# Max Shalom - My Site
 
-A personal portfolio site using Github Pages. I'm using some components from the [Bootstrap](https://getbootstrap.com/) framework, from my project, [BootstrapX](http://maxshalom.me/BootstrapX/), and many components from the [UIkit](https://getuikit.com/) framework.
+A personal portfolio site using Github Pages. I'm using some components from the [Bulma](https://bulma.io/) framework, [VS Code](https://code.visualstudio.com/) to develop, and [Affinity Designer](https://affinity.serif.com/en-us/designer/) for design.
 
-Currently `index.html` is where the website is and I am playing around on `site.html`. `index.html` is linked with `style.css` and `site.html` is linked with `holder.css`.
+If you'd like, [fork](https://github.com/MaxShalom/maxshalom.github.io/fork) the repository and make it your own.
 
-View it at [maxshalom.me](maxshalom.me) and help out if you can.
+View it at [maxshalom.me](maxshalom.me) and if you have any suggestions, let me know.
