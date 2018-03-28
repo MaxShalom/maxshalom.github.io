@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>404 | Max Shalom</title>
+    <title>503 | Max Shalom</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" />
     <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
@@ -20,6 +19,8 @@
     <meta name="msapplication-TileColor" content="#036ed9">
     <meta name="msapplication-config" content="assets/icons/browserconfig.xml">
     <meta name="theme-color" content="#036ed9">
+
+
     <style>
      * {
          -moz-box-sizing:border-box;
@@ -199,7 +200,7 @@
     <style>
 
     .background-color {
-      background-color: #0ff0b3 !important;
+      background-color: #036ed9 !important;
     }
 
 
@@ -230,23 +231,24 @@
   <body class="plain error-page-wrapper background-color background-image">
     <div class="content-container">
 	<div class="head-line secondary-text-color">
-		404
+		503
 	</div>
 	<div class="subheader primary-text-color">
-		Oops, the page you're <br>
-		looking for does not exist.
+		Looks like we're having <br>
+		some server issues.
 	</div>
-	<hr>
-	<div class="clearfix"></div>
-	<div class="context primary-text-color">
-		<!-- doesn't use context_content because it's ALWAYS the same thing -->
+    <hr>
+    <div class="clearfix"></div>
+    <div class="context primary-text-color">
+      
     <p>
-      You may want to head back to the homepage.<br />
+      Go back to the previous page and try again.
       If you think something is broken, contact us.
     </p>
-	</div>
+
+
+    </div>
 	<div class="buttons-container">
-		<a class="border-button" href="http://maxshalom.me" target="_blank">Go To Homepage</a>
 		<a class="border-button" href="mailto:hello@maxshalom.me" target="_blank">Contact Us</a>
 	</div>
 </div>
@@ -356,7 +358,7 @@
        });
 
      };
-     var ep = new ErrorPage('body', "404", "plain");
+     var ep = new ErrorPage('body', "503", "plain");
      ep.initialize();
 
      // hack to make sure content stays centered >_<
