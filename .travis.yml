@@ -1,15 +1,17 @@
+#.travis.yml
+
 language: node_js
 node_js:
- - "6.9"
+  - "6.9"
 
 branches:
   only:
     - master
 
-before-script:
+before_script:
   - npm install -g firebase-tools
-  - npm install -g @angular/cl
-  
+  - npm install -g @angular/cli
+
 script:
   - ng build --prod
 
@@ -19,3 +21,4 @@ after_success:
 notifications:
   email:
     on_failure: change
+    on_success: change
