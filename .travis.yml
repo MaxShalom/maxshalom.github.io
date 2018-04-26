@@ -1,11 +1,21 @@
 language: node_js
 node_js:
- - "8.9s.0"
+ - "6.9"
 
- script:
-  - echo "Deploying"
-install:
+branches:
+  only:
+    - master
+
+before-script:
   - npm install -g firebase-tools
+  - npm install -g @angular/cl
+  
+script:
+  - ng build --prod
 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
+
+notifications:
+  email:
+    on_failure: change
