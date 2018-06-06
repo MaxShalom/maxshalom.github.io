@@ -55,6 +55,29 @@
   padding-right: 50px;
 }
 
+.projects-scroll {
+  height: 250px;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    display: inline-block;
+  }
+}
+
 .projects-button {
   background-color: #000078;
   font-family: 'Work Sans', sans-serif;
