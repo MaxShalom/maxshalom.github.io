@@ -4,4 +4,4 @@ A personal portfolio site using Github Pages. I'm using some components from the
 
 If you'd like, [fork](https://github.com/MaxShalom/maxshalom.github.io/fork) the repository and make it your own.
 
-View it at [maxshalom.me](maxshalom.me) and if you have any suggestions, let me know.
+View it at [maxshalom.com](https://maxshalom.com) and if you have any suggestions, let me know.
