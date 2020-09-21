@@ -1,0 +1,31 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.page-header {
+  color: white;
+  text-align: center;
+  background: rgb(76,76,217);
+  background: -moz-linear-gradient(120deg, rgba(76,76,217,1) 0%, rgba(218,39,39,1) 100%);
+  background: -webkit-linear-gradient(120deg, rgba(76,76,217,1) 0%, rgba(218,39,39,1) 100%);
+  background: linear-gradient(120deg, rgba(76,76,217,1) 0%, rgba(218,39,39,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c4cd9",endColorstr="#da2727",GradientType=1);
+  padding: 10%;
+}
+
+.btn, .project-tagline, .site-footer {
+  display: none;
+}
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #923a82;
+}
+
+a {
+    color: #000000;
+    text-decoration: underline;
+}
