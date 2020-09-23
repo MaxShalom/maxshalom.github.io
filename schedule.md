@@ -9,5 +9,5 @@
 | **11:50-1:00**  |          |          |           |          | Halacha |
 | **1:05-1:40**   | Music    | Hebrew   | JH        | Hebrew   |         |
 | **1:45-2:20**   | JH       | JH       | Civics    | SAFE     |         |
-| **2:40-3:15**   | Hebrew   | Gym      | Henrew    | Gym      |         |
+| **2:40-3:15**   | Hebrew   | Gym      | Hebrew    | Gym      |         |
 | **3:20-3:55**   | AP Stats | AP Stats | AP Stats  | AP Stats |         |
