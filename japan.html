@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japan 2026 - Winter Vacation</title>
+    <title>Japan Adventure: Tokyo, Niseko & Osaka Itinerary</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
             color: white;
         }
         .hero-section {
-            background-image: url('https://images.unsplash.com/photo-1602646993760-7b885ba225af?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=jet-dela-cruz-E5JGJjgADGE-unsplash.jpg');
+            background-image: url('https://images.unsplash.com/photo-1583930220210-ce28c6f72733?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
@@ -101,6 +101,13 @@
                     <!-- Checklist items will be injected by JS -->
                 </div>
             </section>
+
+            <section id="flights" class="mb-16 bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-amber-200 pb-2">Flight Information</h3>
+                <div id="flight-info-container" class="space-y-6">
+                     <!-- Flight info will be injected by JS -->
+                </div>
+            </section>
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 <div class="lg:col-span-4">
@@ -152,21 +159,27 @@
                 { text: "Purchase Universal Studios Japan Tickets & Express Passes", icon: "🎢" },
                 { text: "Reserve Shinkansen Seats (Osaka to Tokyo)", icon: "🚄" }
             ],
+            flights: [
+                { type: "Arrival", airline: "Japan Airlines", flight: "JL3", from: "New York (JFK)", to: "Tokyo (HND)", leave: "Jan 14, 12:45 AM", arrive: "Jan 15, 5:10 AM", duration: "14h 25m" },
+                { type: "Domestic", airline: "JAL / ANA", flight: "Multiple", from: "Tokyo (HND)", to: "Sapporo (CTS)", leave: "Jan 19, Evening", arrive: "+ 95 mins", duration: "1h 35m" },
+                { type: "Domestic", airline: "JAL / ANA / Peach", flight: "Multiple", from: "Sapporo (CTS)", to: "Osaka (KIX)", leave: "Jan 21, Evening", arrive: "+ 2 hours", duration: "2h 00m" },
+                { type: "Departure", airline: "American Airlines", flight: "AA168", from: "Tokyo (HND)", to: "New York (JFK)", leave: "Jan 25, 5:10 PM", arrive: "Jan 25, 4:25 PM", duration: "13h 15m" }
+            ],
             hotels: {
                 tokyo: [
-                    { name: "The Prince Park Tower Tokyo", desc: "Next to Shiba Park, great for Shabbat walks with views of Tokyo Tower." },
-                    { name: "Grand Hyatt Tokyo", desc: "World-class hotel in Roppongi Hills, a modern area perfect for exploring on foot." },
-                    { name: "The Ritz-Carlton, Tokyo", desc: "Legendary service with some of the highest, most serene rooms in the city." }
+                    { name: "The Prince Park Tower Tokyo", desc: "Next to Shiba Park, great for Shabbat walks with views of Tokyo Tower.", price: "Est. from $325/night" },
+                    { name: "Grand Hyatt Tokyo", desc: "World-class hotel in Roppongi Hills, a modern area perfect for exploring on foot.", price: "Est. from $560/night" },
+                    { name: "The Ritz-Carlton, Tokyo", desc: "Legendary service with some of the highest, most serene rooms in the city.", price: "Est. from $920/night" }
                 ],
                 niseko: [
-                    { name: "Park Hyatt Niseko Hanazono", desc: "Ultimate luxury in the family-friendly Hanazono area." },
-                    { name: "Hilton Niseko Village", desc: "A fantastic, reliable option with its own onsen and direct gondola access." },
-                    { name: "Setsu Niseko (Grand Hirafu)", desc: "Modern luxury with a great location in the main village, offering a variety of apartment-style rooms." }
+                    { name: "Park Hyatt Niseko Hanazono", desc: "Ultimate luxury in the family-friendly Hanazono area.", price: "Est. from $785/night" },
+                    { name: "Hilton Niseko Village", desc: "A fantastic, reliable option with its own onsen and direct gondola access.", price: "Est. from $550/night" },
+                    { name: "Setsu Niseko (Grand Hirafu)", desc: "Modern luxury with a great location in the main village, offering a variety of apartment-style rooms.", price: "Est. from $350/night" }
                 ],
                 osaka: [
-                    { name: "Conrad Osaka", desc: "Sky-high luxury with breathtaking panoramic city views, near a beautiful park for Shabbat walks." },
-                    { name: "The St. Regis Osaka", desc: "Classic, refined elegance with famous butler service." },
-                    { name: "Swissôtel Nankai Osaka", desc: "Unbeatable convenience, located directly above Nankai-Namba station for easy transport." }
+                    { name: "Conrad Osaka", desc: "Sky-high luxury with breathtaking panoramic city views, near a beautiful park for Shabbat walks.", price: "Est. from $580/night" },
+                    { name: "The St. Regis Osaka", desc: "Classic, refined elegance with famous butler service.", price: "Est. from $520/night" },
+                    { name: "Swissôtel Nankai Osaka", desc: "Unbeatable convenience, located directly above Nankai-Namba station for easy transport.", price: "Est. from $260/night" }
                 ]
             },
             schedule: [
@@ -196,6 +209,34 @@
             `;
         }
 
+        function createFlightInfoCard(flight) {
+            const typeColor = flight.type === "Domestic" ? "bg-sky-100 text-sky-800" : "bg-amber-100 text-amber-800";
+            return `
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold px-2 py-1 ${typeColor} rounded-full">${flight.type}</span>
+                        <span class="text-sm font-medium text-slate-500">${flight.airline} &middot; ${flight.flight}</span>
+                    </div>
+                    <div class="grid grid-cols-3 items-center text-center">
+                        <div>
+                            <p class="text-lg font-bold">${flight.from}</p>
+                            <p class="text-xs text-slate-500">${flight.leave}</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs text-slate-500">${flight.duration}</p>
+                            <div class="w-full bg-slate-200 rounded-full h-1 my-1">
+                                <div class="bg-amber-600 h-1 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-lg font-bold">${flight.to}</p>
+                            <p class="text-xs text-slate-500">${flight.arrive}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         function createItineraryCard(item) {
             const shabbatClass = item.title.startsWith("Shabbat in") ? 'shabbat-card' : 'bg-white';
             return `
@@ -214,11 +255,12 @@
             const container = document.getElementById('hotel-content');
             const cityHotels = itineraryData.hotels[city];
             container.innerHTML = `
-                <ul class="space-y-3">
+                <ul class="space-y-4">
                     ${cityHotels.map(hotel => `
                         <li>
                             <p class="font-semibold text-slate-800">${hotel.name}</p>
-                            <p class="text-slate-500">${hotel.desc}</p>
+                            <p class="text-sm font-medium text-amber-700">${hotel.price}</p>
+                            <p class="text-slate-500 mt-1">${hotel.desc}</p>
                         </li>
                     `).join('')}
                 </ul>
@@ -228,6 +270,9 @@
         document.addEventListener('DOMContentLoaded', () => {
             const checklistContainer = document.getElementById('checklist-container');
             checklistContainer.innerHTML = itineraryData.checklist.map(createChecklistItem).join('');
+
+            const flightContainer = document.getElementById('flight-info-container');
+            flightContainer.innerHTML = itineraryData.flights.map(createFlightInfoCard).join('');
 
             document.querySelectorAll('.checklist-item').forEach(item => {
                 item.addEventListener('click', () => {
