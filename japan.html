@@ -44,7 +44,7 @@
             color: white;
         }
         .hero-section {
-            background-image: url('https://images.unsplash.com/photo-1583930220210-ce28c6f72733?q=80&w=2070&auto=format&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1602646993760-7b885ba225af?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=jet-dela-cruz-E5JGJjgADGE-unsplash.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -94,17 +94,10 @@
             </div>
         </section>
 
-        <div class="container mx-auto p-4 md:p-8 -mt-24 relative z-20">
-            <section id="checklist" class="mb-16 bg-white p-6 rounded-xl shadow-lg border border-slate-100">
-                <h3 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-amber-200 pb-2">Essential Pre-Trip Actions</h3>
-                <div id="checklist-container" class="space-y-3">
-                    <!-- Checklist items will be injected by JS -->
-                </div>
-            </section>
-
-            <section id="flights" class="mb-16 bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+        <div class="container mx-auto p-4 md:p-8">
+            <section id="flights" class="mb-16 bg-white p-6 rounded-xl shadow-lg border border-slate-100 relative z-20 -mt-32">
                 <h3 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-amber-200 pb-2">Flight Information</h3>
-                <div id="flight-info-container" class="space-y-6">
+                <div id="flight-info-container" class="divide-y divide-slate-200">
                      <!-- Flight info will be injected by JS -->
                 </div>
             </section>
@@ -147,6 +140,12 @@
                     </div>
                 </div>
             </div>
+             <section id="checklist" class="mt-8 bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-amber-200 pb-2">Essential Pre-Trip Actions</h3>
+                <div id="checklist-container" class="space-y-3">
+                    <!-- Checklist items will be injected by JS -->
+                </div>
+            </section>
         </div>
     </main>
 
@@ -189,7 +188,7 @@
                 { part: 1, date: "Sunday, Jan 18", title: "Digital Art & Imperial Grounds", icon: "🎨", details: "<b>AM:</b> Immerse yourselves in teamLab Planets TOKYO (book in advance).<br><b>PM:</b> Visit the Imperial Palace East Garden to see the vast grounds and moats." },
                 { part: 1, date: "Monday, Jan 19", title: "Markets & Flight North", icon: "✈️", details: "<b>AM:</b> Visit the bustling Tsukiji Outer Market or the Samurai Museum.<br><b>Late Afternoon:</b> Transfer to Haneda (HND) for flight to Sapporo (CTS).<br><b>Night:</b> Arrive at CTS, check into airport hotel." },
                 { part: 2, date: "Tuesday, Jan 20", title: "Transfer & First Day on Slopes", icon: "⛷️", details: "<b>AM:</b> Private transfer from CTS airport hotel to Niseko hotel (2.5 hrs).<br><b>PM:</b> Get rental gear and ski Grand Hirafu & Niseko Village.<br><b>Evening:</b> Relax in a traditional Japanese onsen." },
-                { part: 2, date: "Wednesday, Jan 21", title: "Powder Day & Travel to Osaka", icon: "🏂", details: "<b>AM:</b> Ski Hanazono's tree runs or Annupuri's powder bowls.<br><b>3:00 PM:</b> Finish skiing, return gear.<br><b>Late Afternoon:</b> Transfer back to CTS airport.<br><b>Evening:</b> Fly from CTS to Osaka. Transfer to hotel and check in." },
+                { part: 2, date: "Wednesday, Jan 21", title: "Powder Day & Travel to Osaka", icon: "�", details: "<b>AM:</b> Ski Hanazono's tree runs or Annupuri's powder bowls.<br><b>3:00 PM:</b> Finish skiing, return gear.<br><b>Late Afternoon:</b> Transfer back to CTS airport.<br><b>Evening:</b> Fly from CTS to Osaka. Transfer to hotel and check in." },
                 { part: 3, date: "Thursday, Jan 22", title: "Universal Studios Japan", icon: "🎢", details: "<b>All Day:</b> A full-on adventure day at USJ. Get there before the park opens. Use your pre-purchased Express Passes to maximize your time and enjoyment." },
                 { part: 3, date: "Friday, Jan 23", title: "Day Trip to Kyoto & Shabbat Prep", icon: "⛩️", details: "<b>AM:</b> Early Shinkansen to Kyoto (15 mins). Hike the Fushimi Inari Shrine.<br><b>Afternoon:</b> Head back to Osaka by 2:30 PM to prepare for Shabbat.<br><b>~5:10 PM:</b> Shabbat begins. Attend services & dinner at Chabad of Osaka." },
                 { part: 3, date: "Saturday, Jan 24", title: "Shabbat in Osaka", icon: "✡️", details: "<b>All Day:</b> Day of rest. Attend services. Enjoy a peaceful walk in Nakanoshima Park.<br><b>~6:10 PM:</b> Shabbat ends.<br><b>Evening:</b> Dive into the electric atmosphere of Dotonbori." },
@@ -212,27 +211,29 @@
         function createFlightInfoCard(flight) {
             const typeColor = flight.type === "Domestic" ? "bg-sky-100 text-sky-800" : "bg-amber-100 text-amber-800";
             return `
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="text-xs font-semibold px-2 py-1 ${typeColor} rounded-full">${flight.type}</span>
-                        <span class="text-sm font-medium text-slate-500">${flight.airline} &middot; ${flight.flight}</span>
-                    </div>
-                    <div class="grid grid-cols-3 items-center text-center">
+                <div class="p-4">
+                    <div class="flex items-center justify-between mb-4">
                         <div>
-                            <p class="text-lg font-bold">${flight.from}</p>
-                            <p class="text-xs text-slate-500">${flight.leave}</p>
+                            <span class="text-xs font-semibold px-2 py-1 ${typeColor} rounded-full">${flight.type}</span>
                         </div>
-                        <div class="text-center">
-                            <p class="text-xs text-slate-500">${flight.duration}</p>
-                            <div class="w-full bg-slate-200 rounded-full h-1 my-1">
-                                <div class="bg-amber-600 h-1 rounded-full"></div>
-                            </div>
+                        <div class="text-sm font-medium text-slate-500">${flight.airline} &middot; ${flight.flight}</div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-left w-2/5">
+                            <p class="text-2xl font-bold">${flight.from}</p>
+                            <p class="text-sm text-slate-500">${flight.leave}</p>
                         </div>
-                        <div>
-                            <p class="text-lg font-bold">${flight.to}</p>
-                            <p class="text-xs text-slate-500">${flight.arrive}</p>
+                        <div class="flex-grow flex items-center text-slate-300">
+                            <div class="w-full h-px bg-slate-200"></div>
+                            <span class="text-2xl mx-2">✈</span>
+                            <div class="w-full h-px bg-slate-200"></div>
+                        </div>
+                        <div class="text-right w-2/5">
+                            <p class="text-2xl font-bold">${flight.to}</p>
+                            <p class="text-sm text-slate-500">${flight.arrive}</p>
                         </div>
                     </div>
+                    <p class="text-center text-xs text-slate-400 mt-2">${flight.duration}</p>
                 </div>
             `;
         }
@@ -344,3 +345,4 @@
 
 </body>
 </html>
+�
