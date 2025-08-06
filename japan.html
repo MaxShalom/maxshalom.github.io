@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Adventure: Tokyo, Niseko & Osaka Itinerary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals (Amber, Slate, Stone) -->
+    <!-- Application Structure Plan: A single-page, vertical timeline design. A sticky, scroll-activated navigation bar allows users to jump between the three main trip sections (Tokyo, Niseko, Osaka). The itinerary is presented in a card-based layout, one card per day, for clarity. This structure was chosen to provide a simple, linear, and intuitive overview of a complex, multi-stage trip, making it easy for the family to follow their schedule day by day. -->
+    <!-- Visualization & Content Choices: Report Info: Daily activities -> Goal: Inform/Organize -> Presentation: Icon + Text in Cards -> Interaction: None. | Report Info: Pre-trip tasks -> Goal: Organize -> Presentation: Interactive Checklist -> Interaction: Click to toggle 'complete' state -> Justification: Provides user feedback and a sense of progress. | Report Info: Hotel lists -> Goal: Inform/Compare -> Presentation: Tabbed Interface -> Interaction: Click to switch city -> Justification: Condenses information cleanly. NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            background-image: linear-gradient(to bottom, #f8fafc, #ffffff);
+            overflow-x: hidden;
+        }
+        .shabbat-card {
+            background-color: #f0f9ff; /* sky-50 */
+            border-left-color: #38bdf8; /* sky-400 */
+        }
+        .nav-link.active {
+            color: #f59e0b; /* amber-400 */
+            border-bottom-color: #f59e0b;
+        }
+        header.scrolled .nav-link.active {
+            color: #b45309; /* amber-700 */
+            border-bottom-color: #b45309;
+        }
+        .checklist-item.completed {
+            text-decoration: line-through;
+            color: #64748b; /* slate-500 */
+        }
+        .checklist-item.completed .icon-box {
+            background-color: #16a34a; /* green-600 */
+            color: white;
+        }
+        .tab-btn.active {
+            background-color: #b45309; /* amber-700 */
+            color: white;
+        }
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1583930220210-ce28c6f72733?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .itinerary-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .itinerary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
+        }
+        header {
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        header.scrolled {
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        header.scrolled .nav-link, header.scrolled .header-title {
+            color: #1e293b; /* slate-800 */
+        }
+         header.scrolled .nav-link:hover {
+             color: #b45309; /* amber-700 */
+        }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="header-title text-xl md:text-2xl font-bold text-white">Japan 2026</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#part1" class="nav-link text-white hover:text-amber-300 border-b-2 border-transparent pb-1 font-medium transition-colors">Tokyo</a>
+                    <a href="#part2" class="nav-link text-white hover:text-amber-300 border-b-2 border-transparent pb-1 font-medium transition-colors">Niseko</a>
+                    <a href="#part3" class="nav-link text-white hover:text-amber-300 border-b-2 border-transparent pb-1 font-medium transition-colors">Osaka</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro" class="hero-section h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/10"></div>
+            <div class="relative z-10 px-4">
+                <h2 class="text-4xl md:text-6xl font-bold mb-2">Winter Vacation 2026 - Japan</h2>
+                <p class="text-lg md:text-xl font-light">January 15th - 25th, 2026</p>
+            </div>
+        </section>
+
+        <div class="container mx-auto p-4 md:p-8 -mt-24 relative z-20">
+            <section id="checklist" class="mb-16 bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-amber-200 pb-2">Essential Pre-Trip Actions</h3>
+                <div id="checklist-container" class="space-y-3">
+                    <!-- Checklist items will be injected by JS -->
+                </div>
+            </section>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-4">
+                     <div id="hotel-section" class="bg-white p-6 rounded-xl shadow-lg border border-slate-100 sticky top-24">
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Recommended 5-Star Hotels</h3>
+                        <div class="flex border-b border-slate-200 mb-4">
+                            <button class="tab-btn flex-1 p-2 text-sm font-medium text-slate-600 transition-colors" data-city="tokyo">Tokyo</button>
+                            <button class="tab-btn flex-1 p-2 text-sm font-medium text-slate-600 transition-colors" data-city="niseko">Niseko</button>
+                            <button class="tab-btn flex-1 p-2 text-sm font-medium text-slate-600 transition-colors" data-city="osaka">Osaka</button>
+                        </div>
+                        <div id="hotel-content" class="text-sm">
+                            <!-- Hotel content will be injected by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8">
+                    <div id="part1" class="mb-16 pt-20 -mt-20">
+                        <h2 class="text-3xl font-bold text-amber-700 mb-6">Part 1: Tokyo - The Electric Metropolis</h2>
+                        <div class="space-y-6">
+                            <!-- Tokyo Itinerary Cards -->
+                        </div>
+                    </div>
+
+                    <div id="part2" class="mb-16 pt-20 -mt-20">
+                        <h2 class="text-3xl font-bold text-amber-700 mb-6">Part 2: Niseko - Powder Paradise</h2>
+                         <div class="space-y-6">
+                            <!-- Niseko Itinerary Cards -->
+                        </div>
+                    </div>
+
+                    <div id="part3" class="mb-16 pt-20 -mt-20">
+                        <h2 class="text-3xl font-bold text-amber-700 mb-6">Part 3: Osaka & Kansai - Thrills & Tradition</h2>
+                         <div class="space-y-6">
+                            <!-- Osaka Itinerary Cards -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const itineraryData = {
+            checklist: [
+                { text: "Contact Chabad Houses in Tokyo & Osaka", icon: "🕍" },
+                { text: "Book All Hotels & International/Domestic Flights", icon: "✈️" },
+                { text: "Reserve Private Transfer from CTS to Niseko", icon: "🚐" },
+                { text: "Purchase Universal Studios Japan Tickets & Express Passes", icon: "🎢" },
+                { text: "Reserve Shinkansen Seats (Osaka to Tokyo)", icon: "🚄" }
+            ],
+            hotels: {
+                tokyo: [
+                    { name: "The Prince Park Tower Tokyo", desc: "Next to Shiba Park, great for Shabbat walks with views of Tokyo Tower." },
+                    { name: "Grand Hyatt Tokyo", desc: "World-class hotel in Roppongi Hills, a modern area perfect for exploring on foot." },
+                    { name: "The Ritz-Carlton, Tokyo", desc: "Legendary service with some of the highest, most serene rooms in the city." }
+                ],
+                niseko: [
+                    { name: "Park Hyatt Niseko Hanazono", desc: "Ultimate luxury in the family-friendly Hanazono area." },
+                    { name: "Hilton Niseko Village", desc: "A fantastic, reliable option with its own onsen and direct gondola access." },
+                    { name: "Setsu Niseko (Grand Hirafu)", desc: "Modern luxury with a great location in the main village, offering a variety of apartment-style rooms." }
+                ],
+                osaka: [
+                    { name: "Conrad Osaka", desc: "Sky-high luxury with breathtaking panoramic city views, near a beautiful park for Shabbat walks." },
+                    { name: "The St. Regis Osaka", desc: "Classic, refined elegance with famous butler service." },
+                    { name: "Swissôtel Nankai Osaka", desc: "Unbeatable convenience, located directly above Nankai-Namba station for easy transport." }
+                ]
+            },
+            schedule: [
+                { part: 1, date: "Thursday, Jan 15", title: "Arrival & Shinjuku Views", icon: "🛬", details: "<b>AM:</b> Arrive at Haneda (HND), clear customs, transfer to hotel.<br><b>PM:</b> Ascend Tokyo Metropolitan Government Building for panoramic views.<br><b>Evening:</b> Explore Shinjuku, self-catered dinner." },
+                { part: 1, date: "Friday, Jan 16", title: "Shibuya Crossing & Shabbat Prep", icon: "🚶‍♂️", details: "<b>AM:</b> Witness the famous Shibuya Scramble Crossing.<br><b>Afternoon:</b> Return to hotel to prepare for Shabbat.<br><b>~4:55 PM:</b> Shabbat begins. Attend services & dinner at Chabad of Tokyo." },
+                { part: 1, date: "Saturday, Jan 17", title: "Shabbat in Tokyo", icon: "✡️", details: "<b>All Day:</b> Day of rest. Attend services. Enjoy a peaceful walk in Shiba Park or Happo-en Garden.<br><b>~5:55 PM:</b> Shabbat ends.<br><b>Evening:</b> Experience Akihabara Electric Town's neon lights and arcades." },
+                { part: 1, date: "Sunday, Jan 18", title: "Digital Art & Imperial Grounds", icon: "🎨", details: "<b>AM:</b> Immerse yourselves in teamLab Planets TOKYO (book in advance).<br><b>PM:</b> Visit the Imperial Palace East Garden to see the vast grounds and moats." },
+                { part: 1, date: "Monday, Jan 19", title: "Markets & Flight North", icon: "✈️", details: "<b>AM:</b> Visit the bustling Tsukiji Outer Market or the Samurai Museum.<br><b>Late Afternoon:</b> Transfer to Haneda (HND) for flight to Sapporo (CTS).<br><b>Night:</b> Arrive at CTS, check into airport hotel." },
+                { part: 2, date: "Tuesday, Jan 20", title: "Transfer & First Day on Slopes", icon: "⛷️", details: "<b>AM:</b> Private transfer from CTS airport hotel to Niseko hotel (2.5 hrs).<br><b>PM:</b> Get rental gear and ski Grand Hirafu & Niseko Village.<br><b>Evening:</b> Relax in a traditional Japanese onsen." },
+                { part: 2, date: "Wednesday, Jan 21", title: "Powder Day & Travel to Osaka", icon: "🏂", details: "<b>AM:</b> Ski Hanazono's tree runs or Annupuri's powder bowls.<br><b>3:00 PM:</b> Finish skiing, return gear.<br><b>Late Afternoon:</b> Transfer back to CTS airport.<br><b>Evening:</b> Fly from CTS to Osaka. Transfer to hotel and check in." },
+                { part: 3, date: "Thursday, Jan 22", title: "Universal Studios Japan", icon: "🎢", details: "<b>All Day:</b> A full-on adventure day at USJ. Get there before the park opens. Use your pre-purchased Express Passes to maximize your time and enjoyment." },
+                { part: 3, date: "Friday, Jan 23", title: "Day Trip to Kyoto & Shabbat Prep", icon: "⛩️", details: "<b>AM:</b> Early Shinkansen to Kyoto (15 mins). Hike the Fushimi Inari Shrine.<br><b>Afternoon:</b> Head back to Osaka by 2:30 PM to prepare for Shabbat.<br><b>~5:10 PM:</b> Shabbat begins. Attend services & dinner at Chabad of Osaka." },
+                { part: 3, date: "Saturday, Jan 24", title: "Shabbat in Osaka", icon: "✡️", details: "<b>All Day:</b> Day of rest. Attend services. Enjoy a peaceful walk in Nakanoshima Park.<br><b>~6:10 PM:</b> Shabbat ends.<br><b>Evening:</b> Dive into the electric atmosphere of Dotonbori." },
+                { part: 3, date: "Sunday, Jan 25", title: "Homeward Bound via Bullet Train", icon: "🚄", details: "<b>AM:</b> Final morning in Osaka. Last-minute shopping or sightseeing.<br><b>Afternoon:</b> Board Shinkansen from Shin-Osaka to Tokyo.<br><b>PM:</b> Arrive at Tokyo Station, transfer to Haneda (HND) for flight home." }
+            ]
+        };
+
+        function createChecklistItem(item) {
+            return `
+                <div class="checklist-item flex items-center cursor-pointer group">
+                    <div class="icon-box flex-shrink-0 w-8 h-8 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mr-4 transition-colors">
+                        <span class="check-icon hidden text-lg">✓</span>
+                        <span class="main-icon">${item.icon}</span>
+                    </div>
+                    <span class="flex-grow text-slate-700 group-hover:text-amber-800 transition-colors">${item.text}</span>
+                </div>
+            `;
+        }
+
+        function createItineraryCard(item) {
+            const shabbatClass = item.title.startsWith("Shabbat in") ? 'shabbat-card' : 'bg-white';
+            return `
+                <div class="itinerary-card ${shabbatClass} p-6 rounded-xl shadow-lg border border-slate-100 flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-xl mt-1">${item.icon}</div>
+                    <div>
+                        <p class="text-sm font-semibold text-amber-700">${item.date}</p>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">${item.title}</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">${item.details}</p>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function displayHotels(city) {
+            const container = document.getElementById('hotel-content');
+            const cityHotels = itineraryData.hotels[city];
+            container.innerHTML = `
+                <ul class="space-y-3">
+                    ${cityHotels.map(hotel => `
+                        <li>
+                            <p class="font-semibold text-slate-800">${hotel.name}</p>
+                            <p class="text-slate-500">${hotel.desc}</p>
+                        </li>
+                    `).join('')}
+                </ul>
+            `;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const checklistContainer = document.getElementById('checklist-container');
+            checklistContainer.innerHTML = itineraryData.checklist.map(createChecklistItem).join('');
+
+            document.querySelectorAll('.checklist-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('completed');
+                    item.querySelector('.check-icon').classList.toggle('hidden');
+                    item.querySelector('.main-icon').classList.toggle('hidden');
+                });
+            });
+
+            const part1Container = document.querySelector('#part1 .space-y-6');
+            const part2Container = document.querySelector('#part2 .space-y-6');
+            const part3Container = document.querySelector('#part3 .space-y-6');
+
+            part1Container.innerHTML = itineraryData.schedule.filter(item => item.part === 1).map(createItineraryCard).join('');
+            part2Container.innerHTML = itineraryData.schedule.filter(item => item.part === 2).map(createItineraryCard).join('');
+            part3Container.innerHTML = itineraryData.schedule.filter(item => item.part === 3).map(createItineraryCard).join('');
+            
+            const hotelTabs = document.querySelectorAll('.tab-btn');
+            hotelTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    hotelTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    displayHotels(tab.dataset.city);
+                });
+            });
+            
+            document.querySelector('.tab-btn[data-city="tokyo"]').click();
+
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            const sections = document.querySelectorAll('main > div > div > div[id]');
+            const navLinks = document.querySelectorAll('nav a');
+            const cityMap = {
+                part1: 'tokyo',
+                part2: 'niseko',
+                part3: 'osaka'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href').substring(1) === sectionId);
+                        });
+
+                        const city = cityMap[sectionId];
+                        const cityTab = document.querySelector(`.tab-btn[data-city="${city}"]`);
+                        if (cityTab && !cityTab.classList.contains('active')) {
+                            cityTab.click();
+                        }
+                    }
+                });
+            }, { rootMargin: "-40% 0px -60% 0px" });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
